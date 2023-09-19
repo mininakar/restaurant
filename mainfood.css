@@ -1,0 +1,262 @@
+@import url(https://fonts.googleapis.com/css?family=Tenor+Sans|PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Trirong);
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+.menu-main {
+  list-style: none;
+  margin: 10px 0 5px;
+  padding: 25px 0 5px;
+  text-align: center;
+  background: white;
+}
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+  content: "|";
+  color: #606060;
+  display: inline-block;
+  vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 34px 0 30px;
+  font-size: 17px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color: #444;}
+.menu-main a.current, .menu-main a:hover{color: #d0b97d;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #d0b97d;
+  transition: .8s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}
+@media (max-width: 550px) {
+.menu-main {padding-top: 0;}
+.menu-main li {display: block;}
+.menu-main li:after {content: none;}
+.menu-main a {
+  padding: 25px 0 20px;
+  margin: 0 30px;
+}
+}
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+font-family: 'Roboto', sans-serif;}
+
+header {
+   position: sticky; /* Приклеиваем заголовок */
+  top: 0; /* К верхнему краю родителя */
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+    background: #d0b97d;
+  padding: 20px 10px;
+}
+
+.wrap-logo {
+  margin-left: 40%;
+   font-family: "Trirong", serif;
+  display: flex;
+  align-items: center;
+
+}
+
+header a {
+  font-family:  'PT Serif', serif;
+  margin-right: 20px;
+  color: #212121;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+header a.logo {
+  font-size: 25px;
+}
+
+header a:hover {
+  color: #c4890a;
+}
+
+header a.active {
+  color: #c4890a;
+}
+a:visited {
+  color: #444;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  }
+
+
+.wrapper{
+  display: flex;
+
+  /*position: sticky; !* Приклеиваем заголовок *!*/
+  /*top: 0; !* К верхнему краю родителя *!*/
+
+
+  /*position: sticky;*/
+  /*top: 0;*/
+  /*min-height: 2em;*/
+  /*background: lightpink;*/
+
+
+}
+* {box-sizing: border-box; margin: 0; }
+.widget {
+  display: block;
+  padding: 20px 30px;
+  background: white;
+  font-family:  'PT Serif', serif;
+
+  position: fixed;
+  top: 110px;
+
+
+}
+
+.widget-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #222;
+  font-size: 16px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  border-left: 2px solid #d0b97d;
+}
+.widget-list {
+  padding: 0;
+  list-style: none;
+}
+.widget-list a:before {
+  content: "\2014";
+  margin-right: 14px;
+}
+.widget-list a {
+  text-decoration: none;
+  outline: none;
+  display: block;
+  padding: 6px 0;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: #444;
+  transition: .3s linear;
+}
+.widget-list a:hover {color: #b99d61;}
+
+
+.widget-list a.active{
+  color:red;
+}
+/*Оформление блюд*/
+* {
+  box-sizing: border-box;
+}
+p, h3 {margin: 0}
+.post {
+    float: left;
+    margin-right: 0px;
+    margin-top: 20px;
+margin-left: 65px;
+  padding-bottom: 20px;
+  width: 300px;
+  height: 500px;
+  /*margin: 50px auto 0;*/
+  position: relative;
+  background: white;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+  border-radius: 3px;
+  font-family: 'Scada', sans-serif;
+}
+.post-top {
+  min-height: 45px;
+  position: relative;
+  overflow: hidden;
+}
+.post-top a {
+  text-decoration: none;
+  display: block;
+}
+.post-top-img {
+  border-radius: 3px 3px 0 0;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.post-top-angle {
+  width: 180px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  top: 20px;
+  right: -50px;
+  transform:rotate(45deg);
+  color: #fefefe;
+  text-align: center;
+  background: #F8CF82;
+  font-size: 16px;
+  font-weight:bold;
+}
+.post-top-price {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+}
+.post-top-price span {
+display: inline-block;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 20px;
+  background: #F8CF82;
+  border-radius: 3px 0 0 0;
+  color: #fefefe;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.post-top-price:after {
+  content: " ";
+  display: block;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #F8CF82;
+}
+.post-content {
+  padding: 20px;
+  font-family:  'PT Serif', serif;
+}
+.post-content h3 {
+  font-size: 1.5em;
+}
+.post-content p {
+  margin-top: 10px;
+  color: #6e6e6e;
+  line-height: 1.5em;
+}
+

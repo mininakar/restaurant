@@ -1,0 +1,328 @@
+@import url(https://fonts.googleapis.com/css?family=Tenor+Sans|PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Trirong);
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+
+::-webkit-scrollbar {
+    width: 10px; /* ширина для вертикального скролла */
+    height: 50px; /* высота для горизонтального скролла */
+    background-color: #ffffff;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: #d0b97d;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #c4890a;
+    border-radius: 2px;
+}
+
+/*.topNubex {*/
+/*	position: fixed;*/
+/*	right: 45px;*/
+/*	bottom: 45px;}*/
+
+/*html, body{*/
+/*    height: 99%;*/
+/*    border: 1px solid red;*/
+/*    overflow:hidden;*/
+/*}*/
+/**{*/
+/*  margin:0;*/
+/*}*/
+
+
+.arrow-left,
+.arrow-right {
+    cursor: pointer;
+}
+
+.menu-main {
+  list-style: none;
+  margin: 10px 0 5px;
+  padding: 25px 0 5px;
+  text-align: center;
+  background: white;
+}
+.menu-main div {display: inline-block;}
+.menu-main div:after {
+  content: "|";
+  color: #606060;
+  display: inline-block;
+  vertical-align:top;
+}
+.menu-main div:last-child:after {content: none;}
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 34px 0 30px;
+  font-size: 17px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color: #444;}
+.menu-main a.current, .menu-main a:hover{color: #d0b97d;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #d0b97d;
+  transition: .8s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}
+@media (max-width: 550px) {
+.menu-main {padding-top: 0;}
+.menu-main div {display: block;}
+.menu-main div:after {content: none;}
+.menu-main a {
+  padding: 25px 0 20px;
+  margin: 0 30px;
+}
+}
+
+
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+font-family: 'Roboto', sans-serif;}
+
+header {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+    background: #d0b97d;
+  padding: 20px 10px;
+}
+
+.wrap-logo {
+  margin-left: 40%;
+   font-family: "Trirong", serif;
+  display: flex;
+  align-items: center;
+}
+
+header a {
+  font-family:  'PT Serif', serif;
+  margin-right: 20px;
+  color: #212121;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+header a.logo {
+  font-size: 25px;
+}
+
+header a:hover {
+  color: #c4890a;
+}
+
+header a.active {
+  color: #c4890a;
+}
+a:visited {
+  color: #444;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  }
+
+
+.wrapper{
+  display: flex;
+
+  /*position: sticky; !* Приклеиваем заголовок *!*/
+  /*top: 0; !* К верхнему краю родителя *!*/
+
+
+  /*position: sticky;*/
+  /*top: 0;*/
+  /*min-height: 2em;*/
+  /*background: lightpink;*/
+
+
+}
+* {box-sizing: border-box; margin: 0; }
+.widget {
+  display: block;
+  padding: 20px 30px;
+  background: white;
+  font-family:  'PT Serif', serif;
+
+  position: fixed;
+  top: 110px;
+
+
+}
+
+.widget-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #222;
+  font-size: 16px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  border-left: 2px solid #d0b97d;
+}
+.widget-list {
+  padding: 0;
+  list-style: none;
+}
+.widget-list a:before {
+  content: "\2014";
+  margin-right: 14px;
+}
+.widget-list a {
+  text-decoration: none;
+  outline: none;
+  display: block;
+  padding: 6px 0;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: #444;
+  transition: .3s linear;
+}
+.widget-list a:hover {color: #b99d61;}
+
+
+
+/*Оформление картинки*/
+*, *:after {box-sizing: border-box;}
+.shadow-border {
+  float: left;
+  padding-bottom: 10px;
+  height: 350px;
+  display: block;
+  width: 400px;
+  margin: 20px auto 0;
+  position: relative;
+}
+ .shadow-border:after {
+   float: left;
+  content:"";
+  width: 100%;
+  /*position: absolute;*/
+  top: 5px;
+  left: 10px;
+  z-index: 1;
+  border: 5px solid #b99d61;
+}
+.shadow-border img {
+  float: left;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  /*position: static;!* relative*!*/
+  z-index: 1;
+}
+
+/*Оформление текста*/
+.text{
+  float: left;
+  margin-left: 200px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  width: 400px;
+  height: 430px;
+  display: block;
+}
+
+.headerfortext{
+  font-family:  'PT Serif', serif;
+  font-size: 40px;
+  color: #444;
+}
+.maintext{
+  font-family:  'PT Serif', serif;
+  font-size: 18px;
+  color: #444;
+  text-align: justify;
+    letter-spacing: 4px;
+  word-spacing: 1px;
+}
+
+
+.text2{
+  float: left;
+  margin-left: 150px;
+  margin-right: 220px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  width: 400px;
+  height: 430px;
+  display: block;
+}
+
+.headerfortext2{
+  font-family:  'PT Serif', serif;
+  font-size: 40px;
+  color: #444;
+}
+.maintext2{
+  font-family:  'PT Serif', serif;
+  font-size: 18px;
+  color: #444;
+  text-align: justify;
+    letter-spacing: 4px;
+  word-spacing: 1px;
+}
+
+
+.slider-container {
+  margin-left: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.slider {
+  display: block;
+  width: 100px;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+.items {
+  border-radius: 30px;
+  width: 900px;
+  height: 270px;
+  display: block;
+  overflow: hidden;
+  transition: top 1s ease-out 0.5s;
+}
+
+.item {
+  width: 900px;
+  height: 270px;
+  background-color: papayawhip;
+  /*transition: all ease .6s;*/
+transition: top 1s ease-out 0.5s;  left: 0;
+  top: 0;
+}
+
+
